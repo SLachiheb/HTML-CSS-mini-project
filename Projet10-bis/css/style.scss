@@ -1,0 +1,149 @@
+$color: #2997ab;
+$font : 'Open Sans', Arial, sans-serif;
+$p : 15px;
+
+body {
+    font: $p $font;
+}
+
+header {
+    background : $color;
+}
+
+header h1 {
+    font-size: 5 * $p;
+}
+
+@if $p == 25px{
+    h1 {
+        color: red;
+    }
+}@else{
+    h1 {
+        color: blue;
+    }
+}
+
+@for $i from 1 through 5 {
+    h#{$i} {
+        font-size: 5 * $p / $i;
+    }
+}
+
+$list : slide1, slide2, slide3;
+
+@each $element in $list {
+    .#{$element}{
+        height: 200px;
+        width: 600px;
+        background: url(../images/#{$element}.jpg);
+    }
+}
+
+$value : 160;
+@while $value > 100 {
+    .width-#{$value} {
+        margin-top: 10px;
+        width : #{$value}px;
+        background: black;
+        height: 20px;
+    }
+    $value : $value - 20;
+}
+
+@function add100($value) {
+    @return $value + 1000;
+}
+
+.box {
+    margin-top: 10px;
+    background: red;
+    height: 100px;
+    width: add100(100px);
+}
+
+/*Code imbriqué*/
+
+header {
+    ul {
+        background-color: lighten( #2997ab, 50%);
+        padding: 15px;
+        li {
+            a {
+                color: black;
+                text-decoration: none;
+                padding: 10px;
+            }
+            list-style: none;
+            display: inline;
+        }   
+    }
+}
+
+/* fonction mixin import class placeholder*/
+
+@import 'colors';
+
+.sidebar {
+    background-color: $importedColor1;
+    color: $importedColor2;
+    box-shadow: 0 0 10px $importedColor3;
+    padding: 25px;
+    width: 300px;
+    display: inline-block;
+}
+
+/* Squelette de class : utile pour class similaire */
+@mixin box ($padding, $margin, $bg-color:#2997ab, $text-color:white) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding;
+    margin: $margin;
+    text-align: center;
+    display: inline-block;
+}
+
+.custom-box1 {
+    @include box(50px, 10px);
+}
+
+.custom-box2 {
+    @include box(20px, 10px, black);
+}
+
+.custom-box3 {
+    @include box(50px, 10px, coral, black);
+}
+
+/*Class placeholder*/
+/*
+    - On ne peut pas placer de paramètre.
+    - Plus performant au niveau de creation de class
+    - Pas utiliser si on a bea ucoup de valeur à changer et choisir mixin !
+*/
+%button {
+    padding: 15px;
+    width: 300px;
+    font-size: 18px;
+    background: #2997ab;
+    color: white;
+    border: none;
+}
+
+.button-orange {
+    @extend %button;
+    background: coral;
+}
+
+.button-green {
+    @extend %button;
+    background: green;
+}
+
+:root {
+    --bg-color : #2997ab;
+}
+
+#var {
+    color: var(--bg-color);
+}

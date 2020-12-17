@@ -1,0 +1,162 @@
+html {
+    background-color: lightgray;
+}
+
+body {
+    margin: 25px auto;
+    width: 1200px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+}
+
+body > * {
+    padding: 20px;
+}
+
+header {
+    grid-column: span 3;
+    background-color: brown;
+    color: white;
+}
+
+main {
+    grid-column: 2 / span 1;
+}
+
+.sidebar {
+    grid-column: 3 ;
+    background-color: grey;
+    color: white;
+}
+
+.menu {
+    grid-column: 1 / 2;
+    background-color: darkcyan;
+    color: white;
+}
+
+footer {
+    grid-column: span 3;
+    background-color: green;
+    color: white;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.menu ul li{
+    padding: 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+@media screen and (max-width : 1200px) {
+    body {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width : 900px) {
+    main {
+        grid-column: 2 / span 2;
+    }
+    .sidebar {
+        grid-column: span 3;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .menu, main {
+        grid-column: span 3;
+    }
+    .menu ul li {
+        display: inline;
+    }
+}
+
+
+
+
+
+
+
+/*html {
+    background-color: lightgray;
+}
+
+body {
+    margin: 25px auto;
+    width: 900px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    grid-template-areas: 
+    "header header header"
+    "menu main slidebar"
+    "footer footer footer";
+}
+
+body > * {
+    padding: 20px;
+}
+
+header {
+    grid-area: header;
+    background-color: brown;
+    color: white;
+}
+
+main {
+    grid-area: main;
+}
+
+.sidebar {
+    grid-area: slidebar;
+    background-color: grey;
+    color: white;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: darkcyan;
+    color: white;
+}
+
+footer {
+    grid-area: footer;
+    background-color: green;
+    color: white;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.menu ul li{
+    padding: 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}*/
+
+

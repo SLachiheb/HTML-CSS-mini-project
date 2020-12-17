@@ -1,0 +1,139 @@
+@charset "UTF-8";
+body {
+  font: 15px "Open Sans", Arial, sans-serif; }
+
+header {
+  background: #2997ab; }
+
+header h1 {
+  font-size: 75px; }
+
+h1 {
+  color: blue; }
+
+h1 {
+  font-size: 75px; }
+
+h2 {
+  font-size: 37.5px; }
+
+h3 {
+  font-size: 25px; }
+
+h4 {
+  font-size: 18.75px; }
+
+h5 {
+  font-size: 15px; }
+
+.slide1 {
+  height: 200px;
+  width: 600px;
+  background: url(../images/slide1.jpg); }
+
+.slide2 {
+  height: 200px;
+  width: 600px;
+  background: url(../images/slide2.jpg); }
+
+.slide3 {
+  height: 200px;
+  width: 600px;
+  background: url(../images/slide3.jpg); }
+
+.width-160 {
+  margin-top: 10px;
+  width: 160px;
+  background: black;
+  height: 20px; }
+
+.width-140 {
+  margin-top: 10px;
+  width: 140px;
+  background: black;
+  height: 20px; }
+
+.width-120 {
+  margin-top: 10px;
+  width: 120px;
+  background: black;
+  height: 20px; }
+
+.box {
+  margin-top: 10px;
+  background: red;
+  height: 100px;
+  width: 1100px; }
+
+/*Code imbriqué*/
+header ul {
+  background-color: #dcf3f7;
+  padding: 15px; }
+  header ul li {
+    list-style: none;
+    display: inline; }
+    header ul li a {
+      color: black;
+      text-decoration: none;
+      padding: 10px; }
+
+/* fonction mixin import class placeholder*/
+.sidebar {
+  background-color: #2997ab;
+  color: white;
+  -webkit-box-shadow: 0 0 10px cyan;
+          box-shadow: 0 0 10px cyan;
+  padding: 25px;
+  width: 300px;
+  display: inline-block; }
+
+/* Squelette de class : utile pour class similaire */
+.custom-box1 {
+  background-color: #2997ab;
+  color: white;
+  padding: 50px;
+  margin: 10px;
+  text-align: center;
+  display: inline-block; }
+
+.custom-box2 {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  display: inline-block; }
+
+.custom-box3 {
+  background-color: coral;
+  color: black;
+  padding: 50px;
+  margin: 10px;
+  text-align: center;
+  display: inline-block; }
+
+/*Class placeholder*/
+/*
+    - On ne peut pas placer de paramètre.
+    - Plus performant au niveau de creation de class
+    - Pas utiliser si on a beaucoup de valeur à changer et choisir mixin !
+*/
+.button-orange, .button-green {
+  padding: 15px;
+  width: 300px;
+  font-size: 18px;
+  background: #2997ab;
+  color: white;
+  border: none; }
+
+.button-orange {
+  background: coral; }
+
+.button-green {
+  background: green; }
+
+:root {
+  --bg-color: #2997ab; }
+
+#var {
+  color: var(--bg-color); }

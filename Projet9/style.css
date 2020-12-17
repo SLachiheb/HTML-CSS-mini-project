@@ -1,0 +1,154 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #001E39;
+    color: white;
+    margin: 0em;
+}
+
+header {
+    background: #00325E;
+    border: 7px solid #004E92;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+header span {
+    position: absolute;
+    top : 50%;
+    left: 30px;
+    transform : translateY(-50%);
+    font-size: 3em;
+}
+
+.category {
+    padding-top: 100px;
+    height: 600px;
+    background-image: url(category.jpg);
+}
+
+.category h2 {
+    font-size: 6em;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 0 10px black, 0 0 20px black;
+    padding-top: 175px;
+}
+
+#search-form {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#search-text {
+    font-size: 2em;
+    padding: 20px;
+    width: 50%;
+    border: none;
+    border-top-left-radius: 5px ;
+    border-bottom-left-radius: 5px;
+}
+
+#search {
+    font-size: 1.75em;
+    width: 120px;
+    padding: 23px;
+    background: #2997ab;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+    left: -4px;
+    top: -2px;
+    border: none;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #00325E;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 50px;
+    box-sizing: border-box;
+    border: 7px solid #004E92;
+    border-right: 4px solid #004E92;
+}
+
+nav ul li a span {
+    color: white;
+}
+
+nav ul li:nth-child(3) {
+    border-right: none;
+}
+
+main {
+    padding: 0 40px 250px 40px;
+}
+
+main h2 {
+    font-size: 3em;
+}
+
+.row {
+    display: flex;
+    height: 220px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.418);
+    padding-bottom: 20px;
+}
+
+.row img {
+    height: 100%;
+}
+
+.row p {
+    font-size: 1.8em;
+    padding-left: 40px;
+    margin: 10px;
+}
+
+#points {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+}
+
+#button-1,
+#button-2  {
+    margin-top: 40px;
+    padding: 32px;
+    width: 100%;
+    box-shadow: 0 3px 2px black;
+    font-size: 1.75em;
+    font-weight: bold;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+}
+#button-1 {
+    background: rgb(102, 202, 1);
+}
+
+#button-2 {
+    background: rgb(50, 105, 255);
+}

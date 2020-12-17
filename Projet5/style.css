@@ -1,0 +1,113 @@
+* { /*OK*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { /*OK*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body { /*OK*/
+    width: 80%;
+    margin: 35px auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+body > h1 {
+    font-size: x-large;
+    text-align: center;
+    margin: 20px;
+}
+
+img {
+    width: 100%;
+}
+
+.row,
+.grid  {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid {
+    flex-wrap: wrap;
+}
+
+.grid .entry {
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 3px rgb(240, 240, 240);
+    margin-bottom: 15px;
+    flex-basis: 19%;
+}
+
+.grid .entry h2{
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 300;
+    color: white;
+}
+
+.row .entry {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.row .entry h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 1em;
+    font-weight: 300;
+    text-shadow: 0 0 20px black;
+    color: white;
+}
+
+.category1 {
+    padding-right: 7px;
+}
+
+.category1 h1,
+.category2 h1 {
+    padding-left: 5px; /*OK*/
+    padding-bottom: 5px;
+    font-size: 1em; /*OK*/
+    font-weight: 300;
+    border-left: 3px solid rgb(184, 2, 2); /*OK*/
+}
+
+.featured {
+    flex : 0 0 50.3%;
+    padding-right: 7px;
+    padding-top: 24px;
+}
+
+.row .featured h2 {font-size: 1.7em;}
+.grid .entry{flex-basis: 19%;}
+
+@media screen and (max-width : 1340px) {
+    body {
+        width: 100%;
+        margin: 0;
+    }
+    .row {flex-wrap: wrap;}
+    .featured {
+        padding: 0;
+        flex-basis: 100%;
+    }
+    .category1, .category2 {
+        flex-basis: 50%;
+        padding: 2px;
+    }
+    .grid .entry {flex-basis: 33%;}
+}
+
+@media screen and (max-width : 750px) {
+    body {padding: 0;}
+    .category1, .category2, .grid .entry  {flex-basis: 100%;}
+}
